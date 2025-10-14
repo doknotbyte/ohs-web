@@ -1,0 +1,90 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+  background: #004aad;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Hero / Sections */
+.hero {
+  background: #e6f0ff;
+  padding: 2rem;
+  text-align: center;
+}
+
+.content, .guidelines, .modules {
+  padding: 2rem;
+}
+
+.panel {
+  display: inline-block;
+  background: #d9eaff;
+  padding: 1rem;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.module-card {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+button {
+  background: #004aad;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #003680;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #004aad;
+  color: white;
+  padding: 1rem;
+  margin-top: 2rem;
+}
