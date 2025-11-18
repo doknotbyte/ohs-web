@@ -48,8 +48,6 @@ nav ul {
   margin-top: 10px;
 }
 
-
-
 nav ul li a {
   color: #fff;
   text-decoration: none;
@@ -66,6 +64,29 @@ nav ul li a.active {
   background-color: #ffd166;
   color: #004d80;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+.hero {
+  background-color: #e6f0fa; /* optional light background for hero */
+  padding: 40px 20px;         /* adjust top-bottom and sides */
+  max-width: 1000px;
+  margin: 40px auto;          /* center the hero section */
+  text-align: justify;         /* justify the text */
+  line-height: 1.8;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.hero h2 {
+  text-align: center;          /* keep heading centered */
+  color: #004d80;
+  font-size: 2.3rem;
+  margin-bottom: 25px;
+}
+
+.hero p {
+  margin-bottom: 20px;         /* spacing between paragraphs */
+  font-size: 1.1rem;
+  color: #333;
 }
 
 /* ===============================
@@ -160,6 +181,64 @@ footer p {
 }
 
 /* ===============================
+   VISION & MISSION CARDS
+   =============================== */
+.vision-mission {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 60px 0;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  padding: 25px 30px;
+  max-width: 500px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h3 {
+  color: #004d80;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.card p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+/* Specific colors if needed */
+.card.vision {
+  border-top: 5px solid #0077b6;
+}
+
+.card.mission {
+  border-top: 5px solid #ffd166;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .vision-mission {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .card {
+    max-width: 90%;
+    padding: 20px;
+  }
+}
+
+
+/* ===============================
    RESPONSIVE DESIGN
    =============================== */
 @media (max-width: 768px) {
@@ -189,4 +268,5 @@ footer p {
     gap: 10px;
   }
 }
+
 
