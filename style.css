@@ -11,8 +11,9 @@ body {
   color: #333;
   line-height: 1.7;
   overflow-x: hidden;
-  padding: 0 5%;
+  padding: 0;
 }
+
 /* ===============================
    HEADER & NAVIGATION
    =============================== */
@@ -22,8 +23,8 @@ header {
   padding: 30px 20px;
   text-align: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
   transition: all 0.4s ease;
 }
 
@@ -35,7 +36,7 @@ header h1 {
   font-size: 2.3rem;
   margin-bottom: 15px;
   letter-spacing: 1.5px;
-  font-weight: 600;
+  font-weight: bold;
   text-transform: uppercase;
 }
 
@@ -51,7 +52,7 @@ nav ul {
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: bold;
   font-size: 1rem;
   letter-spacing: 0.5px;
   padding: 8px 15px;
@@ -65,119 +66,78 @@ nav ul li a.active {
   color: #004d80;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
+
+/* ===============================
+   HERO SECTION
+   =============================== */
 .hero {
-  background-color: #e6f0fa; /* optional light background for hero */
-  padding: 40px 20px;         /* adjust top-bottom and sides */
+  background-color: #c5ebef;
+  padding: 40px 20px;
   max-width: 1000px;
-  margin: 40px auto;          /* center the hero section */
-  text-align: justify;         /* justify the text */
+  margin: 40px auto;
+  text-align: justify;
   line-height: 1.8;
   border-radius: 15px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
 }
 
 .hero h2 {
-  text-align: center;          /* keep heading centered */
+  text-align: center;
   color: #004d80;
   font-size: 2.3rem;
   margin-bottom: 25px;
 }
 
 .hero p {
-  margin-bottom: 20px;         /* spacing between paragraphs */
+  margin-bottom: 20px;
   font-size: 1.1rem;
   color: #333;
 }
 
-/* ===============================
-   MAIN CONTENT (CLEAN, STEADY)
-   =============================== */
-main {
-  max-width: 1100px;
-  margin: 60px auto;
-  padding: 0 20px;
-}
-
-section {
-  margin-bottom: 70px;
-  text-align: center;
-  padding: 20px 0;
-}
-
-section h2 {
-  color: #004d80;
-  font-size: 2.3rem;
-  margin-bottom: 18px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  transition: color 0.3s ease;
-}
-
-section:hover h2 {
-  color: #0077b6;
-}
-
-section p {
-  color: #555;
-  font-size: 1.1rem;
-  max-width: 850px;
-  margin: 0 auto;
-  line-height: 1.8;
-}
-
-/* Decorative underline for title */
-section h2::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 4px;
-  background-color: #ffd166;
-  margin: 12px auto 0;
-  border-radius: 2px;
-  transition: width 0.3s ease;
-}
-
-section:hover h2::after {
-  width: 110px;
-}
-
-/* Optional button style */
-.btn {
-  display: inline-block;
-  background-color: #004d80;
-  color: #fff;
-  padding: 10px 22px;
-  border-radius: 10px;
-  font-weight: 500;
-  text-decoration: none;
-  margin-top: 20px;
-  transition: all 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #ffd166;
-  color: #004d80;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* ===============================
-   FOOTER
-   =============================== */
-footer {
-  background-color: #004d80;
+/* Fullscreen Expand Button */
+.expand-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  background-color: rgba(0,0,0,0.5);
   color: white;
-  text-align: center;
-  padding: 18px 10px;
-  margin-top: 60px;
-  font-size: 0.95rem;
-  letter-spacing: 0.3px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: background-color 0.3s;
 }
 
-footer p {
-  margin: 0;
+.expand-btn:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Minimalist Dots centered below carousel */
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #ffd166;
+
 }
 
 /* ===============================
@@ -214,7 +174,7 @@ footer p {
   text-align: justify;
 }
 
-/* Specific colors if needed */
+
 .card.vision {
   border-top: 5px solid #0077b6;
 }
@@ -223,20 +183,30 @@ footer p {
   border-top: 5px solid #ffd166;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .vision-mission {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .card {
-    max-width: 90%;
-    padding: 20px;
-  }
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
+/* ===============================
+   FOOTER
+   =============================== */
+footer {
+  background-color: #004d80;
+  color: white;
+  text-align: center;
+  padding: 18px 10px;
+  margin-top: 60px;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.15);
+}
+
+footer p {
+  margin: 0;
+}
 
 /* ===============================
    RESPONSIVE DESIGN
@@ -267,6 +237,168 @@ footer p {
     flex-direction: column;
     gap: 10px;
   }
+
+  .vision-mission {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .card {
+    max-width: 90%;
+    padding: 20px;
+  }
 }
+
+/* ===============================
+   SIDEBAR LAYOUT
+   =============================== */
+.page-layout {
+  display: flex;
+  gap: 20px;
+  padding: 20px 5%;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #004d80;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+}
+
+.sidebar h3 {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  border-bottom: 2px solid #ffd166;
+  padding-bottom: 6px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 12px 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 6px 0;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+  color: #ffd166;
+  padding-left: 5px;
+}
+
+.content-area {
+  flex: 1;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* ===============================
+   HOMEPAGE HERO BANNER (NEW)
+   =============================== */
+.hero-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 70px 8%;
+
+  /* 🔵 Background Image (TUP) */
+  background: url("images/tup.jpg") center/cover no-repeat;
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+
+/* 🔶 Yellow overlay shadow (semi-transparent) */
+.hero-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 221, 102, 0.22); /* yellow shadow */
+  backdrop-filter: brightness(0.85);
+  z-index: 0;
+}
+
+.hero-left,
+.hero-right {
+  position: relative;
+  z-index: 2;
+}
+
+/* TEXT */
+.hero-left {
+  max-width: 45%;
+}
+
+.hero-left h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.hero-left h2 span {
+  color: #3bddff;
+}
+
+.hero-left p {
+  font-size: 1.1rem;
+  margin-bottom: 18px;
+  line-height: 1.7;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #3bddff;
+  color: #003049;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.hero-btn:hover {
+  background: #ffd166;
+}
+
+/* ===============================
+   HERO IMAGE – CIRCLE SHAPE
+   =============================== */
+.hero-right img {
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  /* shadow effect */
+  box-shadow: 0 0 25px rgba(9, 9, 9, 0.9);
+}
+
+/* ===============================
+   SMALLER NAVIGATION TEXT
+   =============================== */
+nav ul li a {
+  font-size: 0.85rem !important;
+  padding: 6px 10px;
+}
+
+
 
 

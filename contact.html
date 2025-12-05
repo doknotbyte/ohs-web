@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CONTACT PAGE ONLY */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            padding: 40px 5%;
+        }
+
+        .contact-card {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+        }
+
+        .contact-card h2,
+        .contact-card h3 {
+            margin-bottom: 15px;
+            color: #004d80;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .contact-form textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        .contact-form button {
+            width: 200px;
+            background: #004d80;
+            color: white;
+            border: none;
+            padding: 12px 0;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .contact-form button:hover {
+            background: #0077b6;
+        }
+
+        .info-box {
+            margin-bottom: 20px;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+        }
+
+        .info-box h3 {
+            margin-bottom: 10px;
+            color: #004d80;
+        }
+
+        .info-box p {
+            margin: 5px 0;
+            line-height: 1.5;
+        }
+
+        @media(max-width: 900px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Occupational Health & Safety</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="guidelines.html">GUIDELINES</a></li>
+                <li><a href="lessons.html">LESSONS</a></li>
+                <li><a href="engagement.html">ENGAGEMENT</a></li>
+                <li><a href="contact.html" class="active">CONTACT</a></li>
+                <li><a href="developers.html">DEVELOPERS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTACT PAGE CONTENT -->
+    <div class="contact-container">
+
+        <!-- LEFT FORM -->
+        <div class="contact-card">
+            <h2>Send us a Message</h2>
+
+            <form class="contact-form">
+                <label>First Name</label>
+                <input type="text" placeholder="Your first name">
+
+                <label>Last Name</label>
+                <input type="text" placeholder="Your last name">
+
+                <label>Email Address</label>
+                <input type="email" placeholder="your.email@example.com">
+
+                <label>Phone Number (Optional)</label>
+                <input type="text" placeholder="+63 9XX XXX XXXX">
+
+                <label>Feedback/Insights</label>
+                <input type="text" placeholder="What is your message about?">
+
+                <label>Message</label>
+                <textarea placeholder="Tell us how we can help you..."></textarea>
+
+                <button type="submit">✉ Send Message</button>
+            </form>
+        </div>
+
+        <!-- RIGHT INFORMATION CARDS -->
+        <div>
+            <div class="info-box">
+                <h3>School Address</h3>
+                <p>📍 TUP Manila</p>
+                <p>Ayala Blvd, Ermita, Manila</p>
+                <p>Philippines 1000</p>
+                <p>📞 +63 912 678 3344</p>
+                <p>📧 info@tup.edu.ph</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,5 +1,6 @@
 
 * {
+
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,18 +13,20 @@ body {
   color: #333;
   line-height: 1.7;
   overflow-x: hidden;
-  padding: 0 5%;
+  padding: 0;
 }
 
-
+/* ===============================
+   HEADER & NAVIGATION
+   =============================== */
 header {
   background: linear-gradient(135deg, #004d80, #0077b6);
   color: #fff;
   padding: 30px 20px;
   text-align: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
   transition: all 0.4s ease;
 }
 
@@ -35,7 +38,7 @@ header h1 {
   font-size: 2.3rem;
   margin-bottom: 15px;
   letter-spacing: 1.5px;
-  font-weight: 600;
+  font-weight: bold;
   text-transform: uppercase;
 }
 
@@ -48,12 +51,10 @@ nav ul {
   margin-top: 10px;
 }
 
-
-
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: bold;
   font-size: 1rem;
   letter-spacing: 0.5px;
   padding: 8px 15px;
@@ -82,10 +83,7 @@ section {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-section:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
+
 
 section h2 {
   color: #004d80;
@@ -113,8 +111,8 @@ footer {
   margin-top: 60px;
   font-size: 0.95rem;
   letter-spacing: 0.3px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
   box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.15);
 }
 
