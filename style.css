@@ -331,7 +331,7 @@ footer p {
   position: absolute;
   inset: 0;
   background: rgba(255, 221, 102, 0.22); /* yellow shadow */
-  backdrop-filter: brightness(0.85);
+  backdrop-filter: brightness(0.40);
   z-index: 0;
 }
 
